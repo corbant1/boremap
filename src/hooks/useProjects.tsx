@@ -21,7 +21,16 @@ interface ProjectContextValue {
   deleteProject: (projectId: string) => void;
   
   // Borehole operations
-  addBorehole: (data: { latitude: number; longitude: number; code?: string; status?: BoreholeStatus }) => Borehole | null;
+  addBorehole: (data: { 
+    latitude: number; 
+    longitude: number; 
+    code?: string; 
+    name?: string;
+    status?: BoreholeStatus;
+    groundLevel?: number | null;
+    totalDepth?: number | null;
+    notes?: string;
+  }) => Borehole | null;
   updateBorehole: (boreholeId: string, updates: Partial<Borehole>) => void;
   deleteBorehole: (boreholeId: string) => void;
   selectBorehole: (borehole: Borehole | null) => void;
