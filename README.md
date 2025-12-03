@@ -88,6 +88,26 @@ src/
 2. Optionally filter to export only visible rows
 3. Click "Download CSV" to save the file
 
+## Deployment
+
+### Deploy to GitHub
+
+1. Create a new repository on GitHub (e.g., `boremap`)
+
+2. Add the remote and push:
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/boremap.git
+git branch -M main
+git push -u origin main
+```
+
+### Deploy to Vercel/Netlify
+
+1. Connect your GitHub repository to Vercel or Netlify
+2. Set build command: `npm run build`
+3. Set output directory: `dist`
+4. Add environment variable: `VITE_MAPBOX_TOKEN` (optional, for map functionality)
+
 ## License
 
 MIT
