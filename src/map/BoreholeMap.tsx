@@ -58,18 +58,6 @@ export function BoreholeMap({
     onMapClick(lat, lng);
   };
 
-  // Get marker position on placeholder map
-  const getMarkerPosition = (borehole: Borehole, containerWidth: number, containerHeight: number) => {
-    const centerLat = -36.8485;
-    const centerLng = 174.7633;
-    const scale = 0.0001 * (20 - zoomLevel);
-    
-    const x = containerWidth / 2 + (borehole.longitude - centerLng) / scale;
-    const y = containerHeight / 2 - (borehole.latitude - centerLat) / scale;
-    
-    return { x, y };
-  };
-
   return (
     <div className="h-full relative bg-slate-100">
       {/* Placeholder map with grid */}

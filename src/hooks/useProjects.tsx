@@ -112,7 +112,16 @@ export function ProjectProvider({ children }: { children: React.ReactNode }) {
   }, [loadProjects, currentProject]);
 
   // Add a borehole to current project
-  const addBorehole = useCallback((data: { latitude: number; longitude: number; code?: string; status?: BoreholeStatus }) => {
+  const addBorehole = useCallback((data: { 
+    latitude: number; 
+    longitude: number; 
+    code?: string; 
+    name?: string;
+    status?: BoreholeStatus;
+    groundLevel?: number | null;
+    totalDepth?: number | null;
+    notes?: string;
+  }) => {
     if (!currentProject) return null;
     try {
       const borehole = storage.addBorehole(currentProject.id, data);

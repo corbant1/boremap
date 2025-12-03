@@ -3,7 +3,6 @@
  */
 
 import { useState, useRef, useEffect } from 'react';
-import { StatusPill } from './StatusPill';
 import { SearchIcon, AdjustmentsIcon, DotsVerticalIcon, TrashIcon } from './icons';
 import type { Borehole, BoreholeStatus } from '../data/types';
 import { useProjects } from '../hooks/useProjects';
